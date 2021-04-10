@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Node</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100%;
+        }
+
+        form{
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #ccc;
+            box-shadow: black 0px 0 10px;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        input[type='number']{
+            margin: 3px 0 3px 0;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 0;
+            outline: 0;
+        }
+
+        input[type='number']:nth-of-type(2){
+            margin-bottom: 20px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            appearance: none;
+        }
+
+        input[type='radio']:nth-of-type(n - 4){
+            margin: 5px 0;
+        }
+
+        span:nth-of-type(n-4){
+            margin: 0 5px;
+        }
+
+        button{
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 10px 40px;
+            border-radius: 5px;
+            outline: 0;
+            border: 0;
+            transition: 1s;
+        }
+
+        button:hover{
+            box-shadow: black 0 -10px 30px inset;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <form action="http://127.0.0.1:3000" method="get">
+        
+
+        
+
+        <input type="number" name="n1" id="">
+        <input type="number" name="n2" id="">
+
+        <label><input type="radio" name="op" value="soma"><span>Soma</span></label>
+        <label><input type="radio" name="op" value='sub'><span>Subtração</span></label>
+        <label><input type="radio" name="op" value="multi"><span>Multiplicação</span></label>
+        <label><input type="radio" name="op" value="div"><span>Divisão</span></label>
+        
+
+        <button>Calcular</button>
+
+    </form>
+</body>
+</html>
